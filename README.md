@@ -14,7 +14,7 @@ This project, undertaken by Group 5.0 from the University of Economics and Law, 
 
 Our data engineering efforts encompassed the following:
 
-![Overall Architecture](pictures/Process.pdf)
+![Overall Architecture](pictures/Process.png)
 
 1. **Data Source Layer:** 
    - We utilized the AdventureWorks 2019 database as our primary data source, hosted on Azure SQL Server.
