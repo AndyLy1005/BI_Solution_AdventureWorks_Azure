@@ -35,67 +35,54 @@ Our data engineering efforts encompassed the following:
    - Data from  Azure Synapse Serverless SQL Pool is integrated into Power BI for detailed analysis and visualization.
    - We built a data model consisting of Fact, Dimension, and Bridge tables to facilitate efficient data analysis.
 
-![ERD](Images/ERD.png)
+![Overall Architecture](pictures/ERD.png)
 
 ## Dashboards Built
 
-We developed several interactive dashboards in Power BI to provide insights into different aspects of AWC’s operations:
+We developed an interactive Power BI dashboard to provide comprehensive insights into AWC's supply chain performance, integrating data from various sources to drive informed decision-making. The dashboard is organized into key areas:
 
-### Overview Dashboard
-The Overview Dashboard provides a high-level summary of the company’s overall performance, focusing on key metrics related to product inventory management, sales, purchasing, manufacturing, and product lifecycle.
+### Master Page
 
-- **Overview Page:** Summarizes critical KPIs and serves as a navigation hub for detailed analysis.
+![Overall Architecture](pictures/Introduction.png)
 
-![Overview Dashboard](Images/BI_Overview.png)
+This will be the home page of the report, on this page the research team will provide options for viewers. Each selection will correspond to a dashboard (labeled corresponding to the caption name of each button). In total, this page will display 6 buttons corresponding to the remaining 6 components of the report.
 
-### Sales Dashboard
-The Sales Dashboard offers detailed insights into sales performance, highlighting revenue generation, profitability, and sales trends over time.
+### Overview
 
-- **Sales Overview:** Displays overall sales performance and trends.
+![Overall Architecture](pictures/Overview.png)
 
-![Sales Overview](Images/BI_Sales_Overview.png)
+This page provides an overview of key activities and components in the supply chain. The layout is decomposed into small components such as product supply system, suppliers, supplied products, inventory. Some of the big-picture metrics used in this dashboard include number of orders, average shipping cost, total shipping cost, and average delivery time and order rate metrics. delivery early or on time. Data displayed on the dashboard will be filtered by year.
 
-- **KPI Scoreboards:** Showcases key performance indicators for quick assessment.
+### Shipping KPIs
 
-![Sales KPI Scoreboards](Images/BI_Sales_KPIScoreBoards.png)
+![Overall Architecture](pictures/Shipping.png)
 
-### Product Dashboard
-The Product Dashboard provides an in-depth analysis of the company’s product portfolio, tracking financial and operational performance throughout the product lifecycle.
+This page is a dashboard that displays key shipping-related performance metrics such as average shipping time, Total orders, Average shipping cost per product, and Total shipping cost by month.
 
-- **Product Analysis:** Focuses on profitability, product performance, and lifecycle metrics.
+### Delivery KPIs
 
-![Product Dashboard](Images/BI_Product.png)
+![Overall Architecture](pictures/Delivery.png)
 
-### Purchasing Dashboard
-The Purchasing Dashboard analyzes purchasing operations, tracking key metrics such as quantity ordered, preferred vendors, and rejection rates.
+This page is a dashboard that shows key performance metrics related to delivery such as average lead time, average delivery date, early and on-time order rate, and order rejection rate. The charts show order quantity by shipping method and supplier distribution. With a map showing the distribution of suppliers and a matrix showing indicators by location
 
-- **Purchasing Overview:** Summarizes purchasing activities and key metrics.
+### Inventory KPIs
 
-![Purchasing Overview](Images/BI_Purchasing_overview.png)
+![Overall Architecture](pictures/Inventory.png)
 
-- **Purchase Detail:** Provides detailed analysis of purchase transactions.
+For this page, the dashboard will show key performance indicators related to inventory management such as Total Inventory, DIO (Days Inventory Outstanding), and Inventory Turnover Rate by year and quarter. The chart displays the inventory turnover rate and DIO by month, along with a matrix representing two indicators classified from year to quarter and finally to month.
 
-![Purchase Detail](Images/BI_Purchasing_PurchaseDetail.png)
+### Historical Transaction Cost
 
-- **Purchase Order Analysis:** Tracks purchase orders and their efficiency.
+![Overall Architecture](pictures/Cost_by_products.png)
 
-![Purchase Order](Images/BI_Purchasing_PurchaseOrder.png)
+This page will display a Zebra BI chart analyzing actual costs by product between the periods Quarter 3/2012 - Quarter 2/2013 and Quarter 3/2013 - Quarter 2/2014. The chart shows cost variation by product type and product subcategory.
 
-- **Vendor Analysis:** Evaluates vendor performance and reliability.
+### Manage Product Inventory
 
-![Vendor Analysis](Images/BI_Purchasing_Vendor.png)
+![Overall Architecture](pictures/Purchasing.png)
 
-### Manufacturing Dashboard
-The Manufacturing Dashboard delivers comprehensive insights into manufacturing processes, focusing on metrics such as average manufacturing time, error rate, and manufacturing efficiency.
+This page will be a dashboard to manage product inventory at different locations. In addition, the Total Work Order Qty, Days Inventory Outstanding and Inventory Turnover Ratio buttons will display a matrix corresponding to the labeled values according to the products. The chart displays the total number of products by different storage areas, classified from location - shelf - bin, and the total number of orders by month
 
-- **Manufacturing Overview:** Provides a high-level view of manufacturing efficiency and performance.
+## Conclusion
 
-![Manufacturing Overview](Images/BI_Manufacturing_Overview.png)
-
-- **Manufacturing Detail:** Offers detailed metrics on manufacturing processes, including error rates and production times.
-
-![Manufacturing Detail](Images/BI_Manufacturing_Detail.png)
-
-## Acknowledgements
-
-We express our sincere appreciation to MSc. Le Ba Thien for his invaluable feedback and support throughout this project.
+By implementing this BI solution, AdventureWorks can gain a comprehensive understanding of its supply chain operations, identify areas for improvement, and make data-driven decisions to optimize processes, reduce costs, and enhance overall efficiency.
